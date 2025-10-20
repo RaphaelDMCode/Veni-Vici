@@ -1,0 +1,247 @@
+:root {
+  background-color: #a5e4ff;
+  border: 10px solid #d54343;
+  border-radius: 2px;
+}
+
+h2 {
+  font-family: 'Nintendo DS Bios', sans-serif;
+}
+
+/* ---- [App.jsx] ---- */
+.Layout-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+.Main-Content {
+  flex: 1;
+  background: #36bbf4;
+  border: 5px solid #ff5151;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Main-Content h1 {
+  font-family: 'Nintendo DS Bios', sans-serif;
+  color: #076c97;
+  text-shadow: 1px 1px #98dbf8;
+  margin-bottom: 15px;
+}
+
+.Main-Content p {
+  font-family: 'Nintendo DS Bios', sans-serif;
+}
+
+.Main-Content button {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #ff5151;
+  border: none;
+  font-weight: bold;
+  color: white;
+
+  font-family: 'Nintendo DS Bios', sans-serif;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.Main-Content button:hover {
+  transform: scale(1.05);
+}
+
+.pkm-sprite {
+  width: 120px;
+  height: 120px;
+}
+
+/* ---- [DexEntry.jsx] ---- */
+.type-list, 
+.ability-list, 
+.egg-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ID-section h2,
+.type-section h2, 
+.ability-section h2,
+.egg-section h2 {
+  text-align: center;
+  color: white;
+  font-family: 'Nintendo DS Bios', sans-serif;
+  font-size: 25px;
+  text-shadow: 1px 1px #076c97;
+}
+
+.type-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform:uppercase;
+
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+/* <List of Types Color> */
+.type-item.electric { background-color: #f8d030; border: solid #d4b22b;}  /* Electric */
+.type-item.steel { background-color: #b8b8d0; border: solid #a1a1aa;}     /* Steel */
+.type-item.fire { background-color: #f08030; border: solid #c8763b;}      /* Fire */
+.type-item.water { background-color: #6890f0; border: solid #5677c4;}     /* Water */
+.type-item.grass { background-color: #78c850; border: solid #609f40;}     /* Grass */
+.type-item.ghost { background-color: #705898; border: solid #55466e;}     /* Ghost */
+.type-item.psychic { background-color: #f85888; border: solid #ca5a7c;}   /* Psychic */
+.type-item.normal { background-color: #a8a878; border: solid #8a8a62;}    /* Normal */
+.type-item.ground { background-color: #e0c068; border: solid #ad9450;}    /* Ground */
+.type-item.ice { background-color: #98d8d8; border: solid #79adad;}       /* Ice */
+.type-item.dragon { background-color: #7038f8; border: solid #542eaf;}    /* Dragon */
+.type-item.fairy { background-color: #ee99ac; border: solid #be7b89;}     /* Fairy */
+.type-item.dark { background-color: #705848; border: solid #564437;}      /* Dark */
+.type-item.fighting { background-color: #c03028; border: solid #8f231e;}  /* Fighting */
+.type-item.poison { background-color: #a040a0; border: solid #7e327e;}    /* Poison */
+.type-item.bug { background-color: #a8b820; border: solid #84901f;}       /* Bug */
+.type-item.rock { background-color: #b8a038; border: solid #9e8a30;}      /* Rock */
+.type-item.flying { background-color: #a890f0; border: solid #8874c4;}    /* Flying */
+
+.type-item:hover {
+  transform: scale(1.05);
+}
+
+.ability-item, .egg-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #909090;
+  border: solid #838383;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.ability-item:hover, .egg-item:hover {
+  transform: scale(1.05);
+}
+
+.history-bar, .banned-bar {
+  background-color: #8adcff;
+  padding: 10px;
+  border: 4px solid #1c92c5;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 45%;
+  scrollbar-width: thin;
+  scrollbar-color: #a5e4ff #5fbce7;
+}
+
+.banned-bar {
+  margin-bottom: 5px;
+}
+
+/* ---- [SideBars.jsx] ---- */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 85vh;
+  width: 250px;
+}
+
+/* <Banned Section> */
+.banned-bar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.banned-bar::-webkit-scrollbar-thumb {
+  background-color: #a5e4ff;
+  border-radius: 4px;
+}
+
+.banned-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ban-types {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 4px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.non-type-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #909090;
+  border: solid #838383;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+.non-type-item:hover {
+  transform: scale(1.05);
+}
+
+
+/* <History Section> */
+.history-bar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history-bar::-webkit-scrollbar-thumb {
+  background-color: #a5e4ff;
+  border-radius: 4px;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.history-pkms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #36bbf4;
+  padding: 8px;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.history-pkms:hover {
+  transform: scale(1.03);
+}
+
+.history-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
